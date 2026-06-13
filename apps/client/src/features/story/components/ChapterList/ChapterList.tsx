@@ -65,7 +65,7 @@ export function ChapterList({
       {/* 4 ── Quick Links (First / Latest Chapters) */}
       <div className={styles.quickLinks}>
         {firstChapter && (
-          <a href={firstChapter.url} className={styles.quickLinkItem}>
+          <a href={firstChapter.url === '#' ? `/story/trait-hoarder/chapter/${firstChapter.number}` : firstChapter.url} className={styles.quickLinkItem}>
             <span className={styles.quickLinkLabel}>الفصل الأول</span>
             <span className={styles.quickLinkVal}>
               فصل {firstChapter.number.padStart(2, '0')}
@@ -73,7 +73,7 @@ export function ChapterList({
           </a>
         )}
         {lastChapter && (
-          <a href={lastChapter.url} className={styles.quickLinkItem}>
+          <a href={lastChapter.url === '#' ? `/story/trait-hoarder/chapter/${lastChapter.number}` : lastChapter.url} className={styles.quickLinkItem}>
             <span className={styles.quickLinkLabel}>الفصل الجديد</span>
             <span className={styles.quickLinkVal}>فصل {lastChapter.number.padStart(2, '0')}</span>
           </a>
@@ -104,7 +104,7 @@ export function ChapterList({
             <ul className={styles.chaptersList}>
               {filteredChapters.map((ch) => (
                 <li key={ch.number} className={styles.chapterItem}>
-                  <a href={ch.url} className={styles.chapterLink}>
+                  <a href={ch.url === '#' ? `/story/trait-hoarder/chapter/${ch.number}` : ch.url} className={styles.chapterLink}>
                     <span className={styles.chapterNum}>فصل {ch.number.padStart(2, '0')}</span>
                     <span className={styles.chapterDate}>{ch.date}</span>
                   </a>
