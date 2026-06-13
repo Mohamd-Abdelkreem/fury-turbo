@@ -40,14 +40,7 @@ export function MangaCard({
       onMouseLeave={() => setHovered(false)}
     >
       {/* Cover Image + Badges Container */}
-      <div
-        className={styles.imageWrapper}
-        style={{
-          boxShadow: hovered
-            ? '0 12px 24px rgba(0, 0, 0, 0.5)'
-            : '0 4px 12px rgba(0, 0, 0, 0.3)',
-        }}
-      >
+      <div className={styles.imageWrapper}>
         <CardImage
           src={image}
           title={title}

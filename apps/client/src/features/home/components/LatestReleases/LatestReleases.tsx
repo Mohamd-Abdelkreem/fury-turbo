@@ -45,7 +45,7 @@ export function LatestReleases() {
 
       {/* Grid */}
       <div className={styles.grid}>
-        {LATEST_DATA.slice(0, 15).map((manga) => (
+        {LATEST_DATA.slice(0, 12).map((manga) => (
           <MangaCard key={manga.id} {...manga} stretch />
         ))}
       </div>

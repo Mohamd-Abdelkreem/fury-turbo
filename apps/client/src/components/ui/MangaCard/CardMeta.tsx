@@ -42,7 +42,7 @@ function renderStars(rating: number): React.ReactNode {
 }
 
 export function CardMeta({ title, chapter, rating, isSmall }: CardMetaProps) {
-  const displayRating = rating > 5 ? rating.toFixed(1) : (rating * 2).toFixed(1);
+  const displayRating = rating > 5 ? (rating / 2).toFixed(1) : rating.toFixed(1);
 
   return (
     <div className={styles.meta}>

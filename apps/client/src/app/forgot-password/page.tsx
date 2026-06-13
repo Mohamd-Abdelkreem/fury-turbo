@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 import { Navbar } from '@/features/home/components/Navbar/Navbar';
 import { Footer } from '@/features/home/components/Footer/Footer';
-import { LoginForm } from '@/features/auth/components/LoginForm/LoginForm';
+import { ForgotPasswordForm } from '@/features/auth/components/ForgotPasswordForm/ForgotPasswordForm';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Fury - تسجيل الدخول',
-  description: 'تسجيل الدخول إلى منصة Fury لمتابعة وقراءة المانجا المفضلة لديك.',
+  title: 'Fury - استعادة كلمة المرور',
+  description: 'قم باستعادة كلمة المرور الخاصة بحسابك على منصة Fury.',
 };
 
-export default function LoginPage() {
+export default function ForgotPasswordPage() {
   return (
     <div className={styles.pageWrapper} dir="rtl">
       <div style={{ position: 'relative', zIndex: 10 }}>
@@ -18,7 +18,7 @@ export default function LoginPage() {
 
         {/* Content Container */}
         <div className={styles.contentContainer}>
-          <LoginForm />
+          <ForgotPasswordForm />
         </div>
 
         {/* Footer */}

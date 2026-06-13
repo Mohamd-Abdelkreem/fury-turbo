@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Search, User, Bell, Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '@/features/home/data/heroData';
 import styles from './Navbar.module.css';
@@ -8,7 +8,7 @@ import styles from './Navbar.module.css';
 // ── NavLogo ────────────────────────────────────────────────────────────────
 export function NavLogo() {
   return (
-    <a href="#" className={styles.logoLink}>
+    <a href="/" className={styles.logoLink}>
       <div
         dir="ltr"
         className={styles.logoText}
@@ -103,96 +103,152 @@ export function NavActions({
   mobileOpen,
   onMobileToggle,
 }: NavActionsProps) {
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [notifications, setNotifications] = useState([
+    { id: 1, text: 'صدر الفصل 121 من مانهوا Dark Knight الآن!', time: 'قبل 3 دقائق', unread: true },
+    { id: 2, text: 'تم قبول ترجمتك للفصل 15 من مانهوا Trait Hoarder', time: 'قبل ساعتين', unread: true },
+    { id: 3, text: 'رد Fury على تعليقك في مانهوا Sword Guardian', time: 'قبل يوم واحد', unread: false },
+  ]);
+  const bellRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (bellRef.current && !bellRef.current.contains(event.target as Node)) {
+        setShowNotifications(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const handleMarkAllRead = () => {
+    setNotifications((prev) => prev.map((n) => ({ ...n, unread: false })));
+  };
+
+  const handleItemClick = (id: number) => {
+    setNotifications((prev) =>
+      prev.map((n) => (n.id === id ? { ...n, unread: false } : n))
+    );
+  };
+
+  const unreadCount = notifications.filter((n) => n.unread).length;
+
   return (
     <div className={styles.actions}>
       {/* Search bar */}
       <div className={styles.searchWrapper}>
-        <Search
-          className={styles.searchIcon}
-          style={{
-            color: 'rgba(255,255,255,0.4)',
-            width: 14,
-            height: 14,
-          }}
-        />
-        <input
-          dir="rtl"
-          type="text"
-          value={query}
-          onChange={(e) => onQueryChange(e.target.value)}
-          placeholder="البحث عن مانجا..."
-          className={styles.searchInput}
-          style={{
-            background: 'rgba(255, 255, 255, 0.03)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
-            color: '#ffffff',
-            fontFamily: "'Cairo', sans-serif",
-            fontWeight: 500,
-          }}
-          onFocus={(e) => {
-            e.target.style.width = '220px';
-            e.target.style.background = 'rgba(0, 0, 0, 0.3)';
-            e.target.style.borderColor = 'var(--primary)';
-            e.target.style.boxShadow = '0 0 12px rgba(255, 71, 71, 0.15)';
-          }}
-          onBlur={(e) => {
-            e.target.style.width = '180px';
-            e.target.style.background = 'rgba(255, 255, 255, 0.03)';
-            e.target.style.borderColor = 'rgba(255, 255, 255, 0.08)';
-            e.target.style.boxShadow = 'none';
-          }}
-        />
-        <span className={styles.shortcut}>Ctrl K</span>
+        <div className={styles.searchInner}>
+          <Search
+            className={styles.searchIcon}
+            style={{
+              color: 'rgba(255,255,255,0.4)',
+              width: 14,
+              height: 14,
+            }}
+          />
+          <input
+            dir="rtl"
+            type="text"
+            value={query}
+            onChange={(e) => onQueryChange(e.target.value)}
+            placeholder="البحث عن مانجا..."
+            className={styles.searchInput}
+          />
+          <span className={styles.shortcut}>Ctrl K</span>
+        </div>
       </div>
 
       {/* Bell */}
-      <button
-        className={styles.iconBtn}
-        style={{
-          background: 'rgba(255, 255, 255, 0.03)',
-          border: '1px solid rgba(255, 255, 255, 0.08)',
-        }}
-        onMouseEnter={(e) => {
-          const el = e.currentTarget;
-          el.style.background = 'rgba(255, 71, 71, 0.05)';
-          el.style.borderColor = 'rgba(255, 71, 71, 0.3)';
-          const icon = el.querySelector('svg') as SVGElement;
-          if (icon) {
-            icon.style.color = '#ffffff';
-            icon.style.transform = 'scale(1.05)';
-          }
-        }}
-        onMouseLeave={(e) => {
-          const el = e.currentTarget;
-          el.style.background = 'rgba(255, 255, 255, 0.03)';
-          el.style.borderColor = 'rgba(255, 255, 255, 0.08)';
-          const icon = el.querySelector('svg') as SVGElement;
-          if (icon) {
-            icon.style.color = 'rgba(255,255,255,0.6)';
-            icon.style.transform = 'scale(1)';
-          }
-        }}
-      >
-        <Bell
+      <div className={styles.bellWrapper} ref={bellRef}>
+        <button
+          className={styles.iconBtn}
           style={{
-            width: 15,
-            height: 15,
-            color: 'rgba(255,255,255,0.6)',
-            transition: 'all 0.2s',
+            background: 'rgba(255, 255, 255, 0.03)',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
           }}
-        />
-        <span
-          className={`${styles.pulseDot} animate-pulse`}
-          style={{ boxShadow: '0 0 8px #FF4747' }}
-        />
-      </button>
+          onMouseEnter={(e) => {
+            const el = e.currentTarget;
+            el.style.background = 'rgba(255, 71, 71, 0.05)';
+            el.style.borderColor = 'rgba(255, 71, 71, 0.3)';
+            const icon = el.querySelector('svg') as SVGElement;
+            if (icon) {
+              icon.style.color = '#ffffff';
+              icon.style.transform = 'scale(1.05)';
+            }
+          }}
+          onMouseLeave={(e) => {
+            const el = e.currentTarget;
+            el.style.background = 'rgba(255, 255, 255, 0.03)';
+            el.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+            const icon = el.querySelector('svg') as SVGElement;
+            if (icon) {
+              icon.style.color = 'rgba(255,255,255,0.6)';
+              icon.style.transform = 'scale(1)';
+            }
+          }}
+          onClick={() => setShowNotifications(!showNotifications)}
+        >
+          <Bell
+            style={{
+              width: 15,
+              height: 15,
+              color: 'rgba(255,255,255,0.6)',
+              transition: 'all 0.2s',
+            }}
+          />
+          {unreadCount > 0 && (
+            <span
+              className={`${styles.pulseDot} animate-pulse`}
+              style={{ boxShadow: '0 0 8px #FF4747' }}
+            />
+          )}
+        </button>
+
+        {showNotifications && (
+          <div className={`${styles.notificationsDropdown} animate-fade-in`}>
+            <div className={styles.notificationsHeader}>
+              <span className={styles.notificationsTitle}>الإشعارات ({unreadCount})</span>
+              {unreadCount > 0 && (
+                <button className={styles.markAllReadBtn} onClick={handleMarkAllRead}>
+                  تحديد الكل كمقروء
+                </button>
+              )}
+            </div>
+            <div className={styles.notificationsList}>
+              {notifications.length > 0 ? (
+                notifications.map((n) => (
+                  <div
+                    key={n.id}
+                    className={`${styles.notificationItem} ${n.unread ? styles.unreadItem : ''}`}
+                    onClick={() => handleItemClick(n.id)}
+                  >
+                    {n.unread && <span className={styles.unreadDot} />}
+                    <div className={styles.notificationContent}>
+                      <span className={styles.notificationText}>{n.text}</span>
+                      <span className={styles.notificationTime}>{n.time}</span>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className={styles.emptyState}>لا توجد إشعارات جديدة</div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
 
       {/* Profile */}
-      <button
+      <a
+        href="/login"
         className={styles.profileBtn}
         style={{
           background: 'linear-gradient(135deg, #FF4747 0%, #FF4747 100%)',
           boxShadow: '0 4px 14px rgba(255, 71, 71, 0.25)',
+          textDecoration: 'none',
+          display: 'flex',
+          alignItems: 'center',
         }}
         onMouseEnter={(e) => {
           const el = e.currentTarget;
@@ -218,7 +274,7 @@ export function NavActions({
         >
           دخول
         </span>
-      </button>
+      </a>
 
       {/* Mobile hamburger */}
       <button
@@ -358,7 +414,7 @@ export function MobileMenu({
 }
 
 // ── Navbar Orchestrator ────────────────────────────────────────────────────
-export function Navbar() {
+export function Navbar({ minimal = false }: { minimal?: boolean }) {
   const [query, setQuery] = useState('');
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -376,21 +432,46 @@ export function Navbar() {
     >
       <div className={styles.inner}>
         <NavLogo />
-        <NavLinks />
-        <NavActions
-          query={query}
-          onQueryChange={setQuery}
-          mobileOpen={mobileOpen}
-          onMobileToggle={() => setMobileOpen((v) => !v)}
-        />
+        {minimal ? (
+          <a
+            href="/"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              color: 'rgba(255, 255, 255, 0.6)',
+              fontSize: '0.875rem',
+              fontWeight: 600,
+              fontFamily: "'Cairo', sans-serif",
+              transition: 'color 0.2s',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)')}
+          >
+            <span>العودة للرئيسية</span>
+            <span style={{ fontSize: '1.2rem', transform: 'scaleX(-1)', display: 'inline-block' }}>→</span>
+          </a>
+        ) : (
+          <>
+            <NavLinks />
+            <NavActions
+              query={query}
+              onQueryChange={setQuery}
+              mobileOpen={mobileOpen}
+              onMobileToggle={() => setMobileOpen((v) => !v)}
+            />
+          </>
+        )}
       </div>
 
-      <MobileMenu
-        open={mobileOpen}
-        query={query}
-        onQueryChange={setQuery}
-        onClose={() => setMobileOpen(false)}
-      />
+      {!minimal && (
+        <MobileMenu
+          open={mobileOpen}
+          query={query}
+          onQueryChange={setQuery}
+          onClose={() => setMobileOpen(false)}
+        />
+      )}
     </header>
   );
 }

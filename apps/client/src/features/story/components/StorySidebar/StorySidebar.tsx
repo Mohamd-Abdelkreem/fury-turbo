@@ -68,20 +68,44 @@ export function StorySidebar({
 
       {/* 3 ── Rating Section */}
       <div className={styles.ratingBox}>
+        {/* SVG half-star gradient definition */}
+        <svg style={{ width: 0, height: 0, position: 'absolute' }}>
+          <defs>
+            <linearGradient id="sidebarHalfStar" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="50%" stopColor="var(--accent)" />
+              <stop offset="50%" stopColor="transparent" stopOpacity={1} />
+            </linearGradient>
+          </defs>
+        </svg>
+
         <div className={styles.ratingStars}>
-          {[...Array(5)].map((_, i) => (
-            <Star
-              key={i}
-              style={{
-                width: 15,
-                height: 15,
-                fill: 'var(--accent)',
-                color: 'var(--accent)',
-              }}
-            />
-          ))}
+          {[1, 2, 3, 4, 5].map((starIndex) => {
+            const normalized = rating > 5 ? rating / 2 : rating;
+            const isFilled = normalized >= starIndex;
+            const isHalf = !isFilled && normalized >= starIndex - 0.5;
+            return (
+              <Star
+                key={starIndex}
+                style={{
+                  width: 15,
+                  height: 15,
+                  fill: isFilled
+                    ? 'var(--accent)'
+                    : isHalf
+                      ? 'url(#sidebarHalfStar)'
+                      : 'transparent',
+                  color:
+                    isFilled || isHalf
+                      ? 'var(--accent)'
+                      : 'rgba(255, 255, 255, 0.15)',
+                }}
+              />
+            );
+          })}
         </div>
-        <div className={styles.ratingValue}>{rating.toFixed(1)}</div>
+        <div className={styles.ratingValue}>
+          {(rating > 5 ? rating / 2 : rating).toFixed(1)}
+        </div>
       </div>
 
       {/* 4 ── Info Attributes List */}
