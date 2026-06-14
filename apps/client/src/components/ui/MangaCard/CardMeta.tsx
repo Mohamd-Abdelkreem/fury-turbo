@@ -22,8 +22,8 @@ function renderStars(rating: number): React.ReactNode {
           <Star
             key={starIndex}
             style={{
-              width: 10,
-              height: 10,
+              width: 13,
+              height: 13,
               fill: isFilled
                 ? 'var(--accent)'
                 : isHalf
