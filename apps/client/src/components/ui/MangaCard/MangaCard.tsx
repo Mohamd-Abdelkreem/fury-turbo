@@ -1,10 +1,12 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import type { MangaCardData } from '@/types';
 import { CardImage } from './CardImage';
 import { CardMeta } from './CardMeta';
+import { CardOverlay } from './CardOverlay';
 import styles from './MangaCard.module.css';
 
 interface MangaCardProps extends MangaCardData {
@@ -36,20 +38,24 @@ export function MangaCard({
       }}
     >
       {/* Cover Image + Badges Container */}
-      <div className={styles.imageWrapper}>
-        <CardImage
-          src={image}
-          title={title}
-          flag={flag}
-          isNew={isNew}
-          isHot={isHot}
-          badge={badge}
-          rating={rating}
-        />
-      </div>
+      <Link href={`/story/${id}`} className="w-full">
+        <div className={styles.imageWrapper}>
+          <CardImage
+            src={image}
+            title={title}
+            flag={flag}
+            isNew={isNew}
+            isHot={isHot}
+            badge={badge}
+            rating={rating}
+          />
+          <CardOverlay isSmall={isSmall} />
+        </div>
+      </Link>
 
       {/* Info below card */}
       <CardMeta
+        id={id}
         title={title}
         chapter={chapter}
         rating={rating}
@@ -58,3 +64,5 @@ export function MangaCard({
     </div>
   );
 }
+
+
