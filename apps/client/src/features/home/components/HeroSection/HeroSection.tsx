@@ -453,11 +453,11 @@ export function HeroSection() {
     );
   }, []);
 
-  // Auto-rotate every 7 seconds
+  // Auto-rotate every 7 seconds, restarts whenever activeIndex changes (e.g. manual navigation)
   useEffect(() => {
     const timer = setInterval(handleNext, 7000);
     return () => clearInterval(timer);
-  }, [handleNext]);
+  }, [activeIndex, handleNext]);
 
   const activeItem = HERO_ITEMS[activeIndex]!;
 

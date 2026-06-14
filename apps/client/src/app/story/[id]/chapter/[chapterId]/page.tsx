@@ -90,6 +90,8 @@ const MOCK_PAGES = [
   'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80',
 ];
 
+
+
 export default function ChapterReadingPage() {
   const params = useParams();
   const router = useRouter();

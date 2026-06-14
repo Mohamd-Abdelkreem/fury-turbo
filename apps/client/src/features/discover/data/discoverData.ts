@@ -70,8 +70,7 @@ export const MOCK_DISCOVER_MANGA: MangaCardData[] = [
     chapter: "49",
     rating: 9.0,
     flag: "🇰🇷",
-    image:
-      "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=280&h=400&fit=crop&auto=format",
+    image: "/anime/341452.jpg",
     badge: "ملون",
   },
   {
@@ -80,7 +79,7 @@ export const MOCK_DISCOVER_MANGA: MangaCardData[] = [
     chapter: "14",
     rating: 9.0,
     flag: "🇰🇷",
-    image: "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=280&h=400&fit=crop&auto=format",
+    image: "/anime/366722.jpg",
     badge: "ملون",
   },
   {
@@ -89,8 +88,7 @@ export const MOCK_DISCOVER_MANGA: MangaCardData[] = [
     chapter: "70",
     rating: 10.0,
     flag: "🇰🇷",
-    image:
-      "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=280&h=400&fit=crop&auto=format",
+    image: "/anime/384226.jpg",
     badge: "ملون",
   },
   {
@@ -99,8 +97,7 @@ export const MOCK_DISCOVER_MANGA: MangaCardData[] = [
     chapter: "3",
     rating: 10.0,
     flag: "🇰🇷",
-    image:
-      "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=280&h=400&fit=crop&auto=format",
+    image: "/anime/411246.jpg",
     badge: "ملون",
   },
   {
@@ -109,8 +106,7 @@ export const MOCK_DISCOVER_MANGA: MangaCardData[] = [
     chapter: "28",
     rating: 9.0,
     flag: "🇰🇷",
-    image:
-      "https://images.unsplash.com/photo-1658233427270-ba4d9d03b53c?w=280&h=400&fit=crop&auto=format",
+    image: "/anime/463379.jpg",
     badge: "ملون",
     isHot: true,
   },
@@ -120,7 +116,7 @@ export const MOCK_DISCOVER_MANGA: MangaCardData[] = [
     chapter: "76",
     rating: 4.6,
     flag: "🇰🇷",
-    image: "https://images.unsplash.com/photo-1666153184621-bc6445e3568d?w=280&h=400&fit=crop&auto=format",
+    image: "/anime/463592.jpg",
     badge: "ملون",
   },
   {
@@ -129,7 +125,7 @@ export const MOCK_DISCOVER_MANGA: MangaCardData[] = [
     chapter: "55",
     rating: 4.5,
     flag: "🇰🇷",
-    image: "https://images.unsplash.com/photo-1448125719522-f5ea48ada070?w=280&h=400&fit=crop&auto=format",
+    image: "/anime/472451.jpg",
     isNew: true,
   },
   {
@@ -138,7 +134,7 @@ export const MOCK_DISCOVER_MANGA: MangaCardData[] = [
     chapter: "67",
     rating: 4.4,
     flag: "🇰🇷",
-    image: "https://images.unsplash.com/photo-1709675577960-0b1e7ba55347?w=280&h=400&fit=crop&auto=format",
+    image: "/anime/473048.jpg",
     badge: "ملون",
   },
   {
@@ -147,7 +143,7 @@ export const MOCK_DISCOVER_MANGA: MangaCardData[] = [
     chapter: "312",
     rating: 4.9,
     flag: "🇯🇵",
-    image: "https://images.unsplash.com/photo-1644253599072-9ef3f70dc93c?w=280&h=400&fit=crop&auto=format",
+    image: "/anime/477473.jpg",
     isHot: true,
   },
   {
@@ -156,7 +152,7 @@ export const MOCK_DISCOVER_MANGA: MangaCardData[] = [
     chapter: "19",
     rating: 4.2,
     flag: "🇯🇵",
-    image: "https://images.unsplash.com/photo-1763732397864-5b860bb298b0?w=280&h=400&fit=crop&auto=format",
+    image: "/anime/478748.jpg",
     isNew: true,
   },
 ];

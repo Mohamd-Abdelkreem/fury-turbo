@@ -13,8 +13,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       rating: 4.8,
       flag: '🇯🇵',
       isHot: true,
-      image:
-        'https://images.unsplash.com/photo-1658233427270-ba4d9d03b53c?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/341452.jpg',
     },
     {
       id: 2,
@@ -22,8 +21,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       chapter: 'الفصل 44',
       rating: 4.6,
       flag: '🇯🇵',
-      image:
-        'https://images.unsplash.com/photo-1644253599072-9ef3f70dc93c?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/366722.jpg',
     },
     {
       id: 3,
@@ -32,8 +30,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       rating: 4.7,
       flag: '🇰🇷',
       isNew: true,
-      image:
-        'https://images.unsplash.com/photo-1615038403612-c0db30ce8f91?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/384226.jpg',
     },
     {
       id: 4,
@@ -41,8 +38,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       chapter: 'الفصل 33',
       rating: 4.4,
       flag: '🇯🇵',
-      image:
-        'https://images.unsplash.com/photo-1705831156575-a5294d295a31?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/411246.jpg',
     },
     {
       id: 5,
@@ -50,8 +46,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       chapter: 'الفصل 77',
       rating: 4.5,
       flag: '🇰🇷',
-      image:
-        'https://images.unsplash.com/photo-1763732397864-5b860bb298b0?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/463379.jpg',
     },
     {
       id: 6,
@@ -60,8 +55,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       rating: 4.9,
       flag: '🇯🇵',
       isHot: true,
-      image:
-        'https://images.unsplash.com/photo-1734517709196-48873cca9599?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/463592.jpg',
     },
   ],
   ألعاب: [
@@ -72,8 +66,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       rating: 4.9,
       flag: '🇰🇷',
       isHot: true,
-      image:
-        'https://images.unsplash.com/photo-1644253599072-9ef3f70dc93c?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/472451.jpg',
     },
     {
       id: 2,
@@ -82,8 +75,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       rating: 4.6,
       flag: '🇰🇷',
       isNew: true,
-      image:
-        'https://images.unsplash.com/photo-1734517709196-48873cca9599?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/473048.jpg',
     },
     {
       id: 3,
@@ -91,8 +83,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       chapter: 'الفصل 99',
       rating: 4.7,
       flag: '🇯🇵',
-      image:
-        'https://images.unsplash.com/photo-1615038403612-c0db30ce8f91?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/477473.jpg',
     },
     {
       id: 4,
@@ -101,8 +92,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       rating: 4.3,
       flag: '🇰🇷',
       isNew: true,
-      image:
-        'https://images.unsplash.com/photo-1705831156575-a5294d295a31?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/478748.jpg',
     },
     {
       id: 5,
@@ -111,8 +101,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       rating: 4.8,
       flag: '🇯🇵',
       isHot: true,
-      image:
-        'https://images.unsplash.com/photo-1658233427270-ba4d9d03b53c?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/479384.jpg',
     },
     {
       id: 6,
@@ -120,8 +109,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       chapter: 'الفصل 41',
       rating: 4.5,
       flag: '🇰🇷',
-      image:
-        'https://images.unsplash.com/photo-1763732397864-5b860bb298b0?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/482819.jpg',
     },
   ],
   سحر: [
@@ -131,8 +119,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       chapter: 'الفصل 66',
       rating: 4.7,
       flag: '🇯🇵',
-      image:
-        'https://images.unsplash.com/photo-1448125719522-f5ea48ada070?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/484571.jpg',
     },
     {
       id: 2,
@@ -141,8 +128,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       rating: 4.8,
       flag: '🇯🇵',
       isHot: true,
-      image:
-        'https://images.unsplash.com/photo-1644253599072-9ef3f70dc93c?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/603242.jpg',
     },
     {
       id: 3,
@@ -151,8 +137,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       rating: 4.4,
       flag: '🇰🇷',
       isNew: true,
-      image:
-        'https://images.unsplash.com/photo-1705831156575-a5294d295a31?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/604271.jpg',
     },
     {
       id: 4,
@@ -160,8 +145,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       chapter: 'الفصل 95',
       rating: 4.6,
       flag: '🇯🇵',
-      image:
-        'https://images.unsplash.com/photo-1615038403612-c0db30ce8f91?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/341452.jpg',
     },
     {
       id: 5,
@@ -169,8 +153,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       chapter: 'الفصل 57',
       rating: 4.5,
       flag: '🇰🇷',
-      image:
-        'https://images.unsplash.com/photo-1734517709196-48873cca9599?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/366722.jpg',
     },
     {
       id: 6,
@@ -179,8 +162,7 @@ export const SUGGESTIONS_DATA: Record<SuggestionCategory, MangaCardData[]> = {
       rating: 4.9,
       flag: '🇯🇵',
       isHot: true,
-      image:
-        'https://images.unsplash.com/photo-1658233427270-ba4d9d03b53c?w=280&h=400&fit=crop&auto=format',
+      image: '/anime/384226.jpg',
     },
   ],
 };

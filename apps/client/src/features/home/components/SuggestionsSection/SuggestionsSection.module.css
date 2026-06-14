@@ -137,13 +137,14 @@
 }
 
 .carouselItem {
-  padding-left: 1rem;
+  padding-left: 1.25rem;
   flex: 0 0 50%;
 }
 
 @media (min-width: 640px) {
   .carouselItem {
     flex: 0 0 33.333%;
+    padding-left: 1.75rem;
   }
 }
 

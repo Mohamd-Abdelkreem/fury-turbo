@@ -8,8 +8,7 @@ export const LATEST_DATA: MangaCardData[] = [
     rating: 4.9,
     flag: '🇯🇵',
     isHot: true,
-    image:
-      'https://images.unsplash.com/photo-1644253599072-9ef3f70dc93c?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/341452.jpg',
   },
   {
     id: 2,
@@ -18,8 +17,7 @@ export const LATEST_DATA: MangaCardData[] = [
     rating: 4.5,
     flag: '🇰🇷',
     isNew: true,
-    image:
-      'https://images.unsplash.com/photo-1448125719522-f5ea48ada070?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/366722.jpg',
   },
   {
     id: 3,
@@ -27,8 +25,7 @@ export const LATEST_DATA: MangaCardData[] = [
     chapter: 'الفصل 67',
     rating: 4.4,
     flag: '🇰🇷',
-    image:
-      'https://images.unsplash.com/photo-1709675577960-0b1e7ba55347?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/384226.jpg',
   },
   {
     id: 4,
@@ -37,8 +34,7 @@ export const LATEST_DATA: MangaCardData[] = [
     rating: 4.2,
     flag: '🇯🇵',
     isNew: true,
-    image:
-      'https://images.unsplash.com/photo-1763732397864-5b860bb298b0?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/411246.jpg',
   },
   {
     id: 5,
@@ -46,8 +42,7 @@ export const LATEST_DATA: MangaCardData[] = [
     chapter: 'الفصل 76',
     rating: 4.6,
     flag: '🇰🇷',
-    image:
-      'https://images.unsplash.com/photo-1666153184621-bc6445e3568d?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/463379.jpg',
   },
   {
     id: 6,
@@ -56,8 +51,7 @@ export const LATEST_DATA: MangaCardData[] = [
     rating: 4.7,
     flag: '🇰🇷',
     isHot: true,
-    image:
-      'https://images.unsplash.com/photo-1734517709196-48873cca9599?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/463592.jpg',
   },
   {
     id: 7,
@@ -66,8 +60,7 @@ export const LATEST_DATA: MangaCardData[] = [
     rating: 4.3,
     flag: '🇯🇵',
     isNew: true,
-    image:
-      'https://images.unsplash.com/photo-1705831156575-a5294d295a31?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/472451.jpg',
   },
   {
     id: 8,
@@ -76,8 +69,7 @@ export const LATEST_DATA: MangaCardData[] = [
     rating: 4.8,
     flag: '🇯🇵',
     isHot: true,
-    image:
-      'https://images.unsplash.com/photo-1615038403612-c0db30ce8f91?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/473048.jpg',
   },
   {
     id: 9,
@@ -86,8 +78,7 @@ export const LATEST_DATA: MangaCardData[] = [
     rating: 4.8,
     flag: '🇯🇵',
     isHot: true,
-    image:
-      'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/477473.jpg',
   },
   {
     id: 10,
@@ -96,8 +87,7 @@ export const LATEST_DATA: MangaCardData[] = [
     rating: 4.7,
     flag: '🇰🇷',
     isNew: true,
-    image:
-      'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/478748.jpg',
   },
   {
     id: 11,
@@ -105,8 +95,7 @@ export const LATEST_DATA: MangaCardData[] = [
     chapter: 'الفصل 45',
     rating: 4.5,
     flag: '🇯🇵',
-    image:
-      'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/479384.jpg',
   },
   {
     id: 12,
@@ -115,8 +104,7 @@ export const LATEST_DATA: MangaCardData[] = [
     rating: 4.1,
     flag: '🇰🇷',
     isNew: true,
-    image:
-      'https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/482819.jpg',
   },
   {
     id: 13,
@@ -125,8 +113,7 @@ export const LATEST_DATA: MangaCardData[] = [
     rating: 4.9,
     flag: '🇯🇵',
     isHot: true,
-    image:
-      'https://images.unsplash.com/photo-1580477667995-2b94f01c9516?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/484571.jpg',
   },
   {
     id: 14,
@@ -134,8 +121,7 @@ export const LATEST_DATA: MangaCardData[] = [
     chapter: 'الفصل 74',
     rating: 4.4,
     flag: '🇰🇷',
-    image:
-      'https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/603242.jpg',
   },
   {
     id: 15,
@@ -144,8 +130,7 @@ export const LATEST_DATA: MangaCardData[] = [
     rating: 4.6,
     flag: '🇯🇵',
     isNew: true,
-    image:
-      'https://images.unsplash.com/photo-1601987177651-8edfe6c20009?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/604271.jpg',
   },
   {
     id: 16,
@@ -154,7 +139,6 @@ export const LATEST_DATA: MangaCardData[] = [
     rating: 4.8,
     flag: '🇰🇷',
     isHot: true,
-    image:
-      'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=280&h=400&fit=crop&auto=format',
+    image: '/anime/341452.jpg',
   },
 ];

@@ -31,10 +31,8 @@ export const HERO_ITEMS: HeroItem[] = [
     id: 1,
     title: 'Dark Knight:',
     titleAccent: 'Rise of the Emperor',
-    image:
-      'https://images.unsplash.com/photo-1614583225146-5177e6fbbe7a?w=1600&h=700&fit=crop&auto=format',
-    characterImage:
-      'https://images.unsplash.com/photo-1614583225146-5177e6fbbe7a?w=700&h=700&fit=crop&auto=format',
+    image: '/anime/341452.jpg',
+    characterImage: '/anime/341452.jpg',
     rating: 4.9,
     chapters: '120 فصل',
     reads: '2.5 مليون قراءة',
@@ -48,10 +46,8 @@ export const HERO_ITEMS: HeroItem[] = [
     id: 2,
     title: 'Magic Master:',
     titleAccent: 'Shadow Commander',
-    image:
-      'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1600&h=700&fit=crop&auto=format',
-    characterImage:
-      'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=700&h=700&fit=crop&auto=format',
+    image: '/anime/366722.jpg',
+    characterImage: '/anime/366722.jpg',
     rating: 4.8,
     chapters: '85 فصل',
     reads: '1.8 مليون قراءة',
@@ -65,10 +61,8 @@ export const HERO_ITEMS: HeroItem[] = [
     id: 3,
     title: 'King of Games:',
     titleAccent: 'Legendary Challenger',
-    image:
-      'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1600&h=700&fit=crop&auto=format',
-    characterImage:
-      'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=700&h=700&fit=crop&auto=format',
+    image: '/anime/384226.jpg',
+    characterImage: '/anime/384226.jpg',
     rating: 4.7,
     chapters: '142 فصل',
     reads: '3.2 مليون قراءة',
@@ -82,10 +76,8 @@ export const HERO_ITEMS: HeroItem[] = [
     id: 4,
     title: 'Sword Guardian:',
     titleAccent: 'The Lost Hope',
-    image:
-      'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=1600&h=700&fit=crop&auto=format',
-    characterImage:
-      'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=700&h=700&fit=crop&auto=format',
+    image: '/anime/411246.jpg',
+    characterImage: '/anime/411246.jpg',
     rating: 4.9,
     chapters: '96 فصل',
     reads: '1.2 مليون قراءة',
