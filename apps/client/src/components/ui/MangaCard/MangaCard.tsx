@@ -1,10 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { cn } from '@/lib/utils';
 import type { MangaCardData } from '@/types';
 import { CardImage } from './CardImage';
-import { CardOverlay } from './CardOverlay';
 import { CardMeta } from './CardMeta';
 import styles from './MangaCard.module.css';
 
@@ -26,7 +25,6 @@ export function MangaCard({
   size = 'md',
   stretch = false,
 }: MangaCardProps) {
-  const [hovered, setHovered] = useState(false);
   const isSmall = size === 'sm';
 
   return (
@@ -36,8 +34,6 @@ export function MangaCard({
       style={{
         width: stretch ? '100%' : isSmall ? '150px' : '185px',
       }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
     >
       {/* Cover Image + Badges Container */}
       <div className={styles.imageWrapper}>
@@ -49,14 +45,6 @@ export function MangaCard({
           isHot={isHot}
           badge={badge}
           rating={rating}
-        />
-        <CardOverlay
-          id={id}
-          title={title}
-          chapter={chapter}
-          rating={rating}
-          isSmall={isSmall}
-          hovered={hovered}
         />
       </div>
 
